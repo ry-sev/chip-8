@@ -83,13 +83,8 @@ impl Emulator {
 	}
 
 	pub fn load_rom(&mut self, rom: &PathBuf) -> Result<()> {
-		self.stop();
 		let data = fs::read(rom)?;
-		let start = START_ADDRESS as usize;
-		let end = (START_ADDRESS as usize) + data.len();
-		self.cpu.memory[start..end].copy_from_slice(&data);
-		self.cpu.reset();
-		self.start();
+		self.load_rom_from_bytes(&data);
 		Ok(())
 	}
 
