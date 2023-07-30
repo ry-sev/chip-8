@@ -1,0 +1,16 @@
+[package]
+name = "chip-8"
+version = "0.1.0"
+authors = ["Ricardus Severino"]
+edition = "2021"
+description = "A Chip-8 emulator written Rust"
+license = "MIT"
+keywords = ["chip-8", "emulator"]
+
+[dependencies]
+anyhow = "1.0.72"
+eframe = "0.22.0"
+egui = "0.22.0"
+egui_extras = "0.22.0"
+lazy_static = "1.4.0"
+rand = "0.8.5"
